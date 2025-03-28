@@ -1,0 +1,5 @@
+Bug Bounty Pro Tip:
+
+Record your PoC video before you write your report. If your bug has any mistakes, you'll find them out while reproducing for the video rather than after you've written the whole report. 
+
+Ask me how I learned this one XD

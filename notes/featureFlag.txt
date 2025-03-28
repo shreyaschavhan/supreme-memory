@@ -1,0 +1,1 @@
+Quick bb tip: Look into anything that says “featureFlag” or “flag” in the HTML. Often times teams are doing AB testing on features and you can turn them on by simply turning false->true or adding a string to an array with match-and-replace. More features=more scope=more vulns.

@@ -1,0 +1,4 @@
+let's say the website allows a script from a certain domain, and that domain actually has a URL that supports JSONP. We can use that JSONP to bypass CSP  and execute code.
+
+limitations of JSONP bypass:
+1. some websites restrict the callback parameter of JSONP.

@@ -1,0 +1,3 @@
+DOMPurify does a lot behind the scenes. DOMPurify allows only safe tags by default, such as <h1>, <p>, <div>, and <span>. It also removes all event handlers and clears out the javascript: pseudo-protocol mentioned earlier, ensuring that any HTML you input will not result in XSS in the default scenario.
+
+But one thing to note is that <style> tag is enabled by default, which has it's own risks.

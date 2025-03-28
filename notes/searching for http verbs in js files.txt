@@ -1,0 +1,1 @@
+HTTP verbs such as .get .put .post are great things to search for in js files. These are great things to understand from where the request are being made.

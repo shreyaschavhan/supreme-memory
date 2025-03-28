@@ -1,0 +1,7 @@
+If CSP allows the path `https://example.com/scripts/react/`, it can be bypassed as follows:
+
+```
+<script src="https://example.com/scripts/react/..%2fangular%2fangular.js"></script>
+```
+
+The browser will ultimately load `https://example.com/scripts/angular/angular.js`

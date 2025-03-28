@@ -1,0 +1,3 @@
+javascript uri schemes work when script-src is allowed. You might not need to store the payload somewhere else if the javascript uri schemes are not filtered
+
+so instead of doing <script src=/file.js> you can use <iframe src=javascript:alert(1);>

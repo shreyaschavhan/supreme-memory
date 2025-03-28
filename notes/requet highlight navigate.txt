@@ -1,0 +1,1 @@
+Ever get lost trying to find the page you actually requested in your browser when looking through Burp History? You can use the "Request Highligher" plugin to highlight the "Sec-Fetch-Mode: navigate" header that is sent by your browser. It will highlight every top-level req.

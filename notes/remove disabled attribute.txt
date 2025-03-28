@@ -1,0 +1,2 @@
+Easy little bookmarklet to remove the disabled attribute from every HTML element on the page:
+javascript:document.querySelectorAll("*[disabled]").forEach((a)=>{a.removeAttribute("disabled")})

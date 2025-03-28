@@ -1,0 +1,1 @@
+If a cookie isn't flagged as HTTP only, JavaScript (i.e. XSS) can snatch it.

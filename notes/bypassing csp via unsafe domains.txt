@@ -1,0 +1,1 @@
+if you allow a website to load script-src with, that script-src can load js into your website.

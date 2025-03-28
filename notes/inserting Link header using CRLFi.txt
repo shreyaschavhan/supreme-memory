@@ -1,0 +1,7 @@
+Found an interesting new way to exploit CRLF injections. 
+
+You can insert a "Link" header into the HTTP response and include arbitrary CSS stylesheets on the page. 
+
+Helpful in situations where you can't do response splitting. 
+
+Only Firefox I believe, but haven't tested all.

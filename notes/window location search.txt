@@ -1,0 +1,9 @@
+window.location.search returns the query string from the current URL including the ? symbol
+
+for example:
+
+https://example.com/page?user=shreyas&role=admin is the url
+
+console.log(window.location.search);
+// Output: "?user=shreyas&role=admin"
+

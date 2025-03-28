@@ -1,0 +1,19 @@
+The behavior of "HTML strings can be changed by the browser during rendering" is called mutation. And the XSS achieved by exploiting this behavior is naturally called mutation XSS.
+
+<style> is a magical tag because everything inside this tag is interpreted as text.
+
+But here's the interesting part. If we add an outer <svg>, the way the browser interprets it will be different, and everything changes. The current HTML source code is:
+
+<svg>
+    <style>
+        <a id="test"></a>
+    </style>
+</svg>
+
+The <a> inside the <style> becomes an actual HTML element, not just plain text.
+
+
+This was the problamatic payload for bypassing DOMPurify sanitization:
+
+<svg></p><style><a id="</style><img src=1 onerror=alert(1)>">
+

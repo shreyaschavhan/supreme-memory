@@ -1,0 +1,14 @@
+Browser Security Model:
+
+- The browser impose following restrictions:
+    - **Prohibit Proactive Access to Local Files:**
+        
+        Browsers don’t allow you to read files using Js, or else an attacker could steal whatever they want from your computer like a malware - which is obviously a security concern, hence prohibited.
+        
+    - **Prohibit Calling System APIs:**
+        
+        Regular Applications can do various things, such as changing system settings & network settings, by using APIs provided by the system. But Javascript can’t do that.
+        
+    - **Prohibition of Accessing Content from other web pages:**
+        
+        It’s obvious why it shouldn’t be allowed. If it was allowed you could have read contents of [mail.google.com](http://mail.google.com) from [www.example.com](http://www.example.com), which is definitely bad. It is also known as SOP (Same Origin Policy). A bypass can earn you bounties.

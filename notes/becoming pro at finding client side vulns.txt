@@ -1,0 +1,9 @@
+Becoming a pro in finding client-side bugs is simple. Not easy, but simple. 
+
+1. Go through a JS tutorial and understand the basics. 
+2. Ready everything on this blog 8x until you understand it: https://ysamm.com
+3. Read JS for Hackers by 
+@garethheyes
+ 4x
+
+Then go hack stuff

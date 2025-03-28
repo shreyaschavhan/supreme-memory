@@ -1,0 +1,1 @@
+Hacking life lession: when writing an exploit that involves any sort of crypto handshake/two way interaction, use the same library and language as the vulnerable component. It will save you a lot of time.

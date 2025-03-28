@@ -1,0 +1,3 @@
+suppose there is a button on the page that causes trouble when clicked. You can use the JavaScript code document.body.firstElementChild.nextElementSibling.click to click it. Since the characters in this code are allowed, you can put it inside JSONP: ?callback=document.body.firstElementChild.nextElementSibling.click, and use JSONP to execute the code.
+
+The idea is that although we can only call functions, we can execute methods under the same-origin website.

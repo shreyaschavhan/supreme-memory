@@ -1,0 +1,1 @@
+It’s always a good idea to be on the lookout for a gadget. Gadget meaning a specific HTTP request or a functionality in the application, a gadget that allows you to change something by sending a post request or a get request, a post request with no body or a get request, those requests are very helpful for exploiting client side path traversal.

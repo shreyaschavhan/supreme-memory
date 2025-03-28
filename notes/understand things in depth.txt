@@ -1,0 +1,11 @@
+- He go in depth of how each piece of user input is processed and where it’s reflected or processed and how it works. It’s not a spray and pray thing - he actually trace all inputs to the end.
+- he also process what js files each page is interacting with and how it all integrates together.
+
+<aside>
+💡
+
+Learning:
+
+You gotta figure things out and you need to understand each things in a depth such that you could explain anyone how those things are working together even if you are not the developer of that functionality.
+
+</aside>
