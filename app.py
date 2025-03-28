@@ -144,7 +144,7 @@ class App(customtkinter.CTk):
 if __name__ == "__main__":
     customtkinter.set_appearance_mode("Dark")
     customtkinter.set_default_color_theme("dark-blue")
-    LEARNING_FOLDER = r"A:\self-improvement\professional\work\hacking\learning-cards\notes"  # Update this path
+    LEARNING_FOLDER = r"./notes"  
     card_manager = CardManager(LEARNING_FOLDER)
     app = App(card_manager)
     app.mainloop()
